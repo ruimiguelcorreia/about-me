@@ -1,8 +1,12 @@
-/* HEADER SECTION */
+/***** SECTION 0: HEADER *****/
 * {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    scroll-snap-type: y mandatory;
 }
 
 header {
@@ -10,6 +14,7 @@ header {
     background-size: cover;
     height: 100vh;
     background-attachment: fixed;
+    scroll-snap-align: start;
 }
 
 .outer-box {
@@ -54,7 +59,7 @@ h1 {
 h2 {
     color: #EDAE14;
     font-style: italic;
-    font-size: 16pt;
+    font-size: 18pt;
 }
 
 header a {
@@ -100,4 +105,193 @@ header a button:hover span {
 header a button:hover span:after {
     opacity: 1;
     right: 0;
+}
+
+/***** SECTION I: ABOUT ME *****/
+
+#about-me {
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h3 {
+    font-size: 16pt;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h3 span {
+    color: #EDAE14;
+    text-transform: lowercase;
+}
+
+#about-me p {
+    color: #000;
+    font-size: 14pt;
+    margin: 5px 200px;
+    line-height: 40px;
+}
+
+.cronogram {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.crono-line {
+    width: 100px;
+    border-bottom: #EDAE14 3px solid;
+}
+
+.cronogram figure {
+    position: relative;
+}
+
+.cronogram img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border:#EDAE14 3px solid;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.cronogram figcaption {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #000;
+}
+
+.cronogram figure:hover img{
+    opacity: 0.3;
+}
+
+.cronogram figure:hover figcaption {
+    opacity: 1.0;
+}
+
+#about-me a button {
+    border-radius: 4px;
+    background: #EDAE14 !important;
+    border: none;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12pt;
+    font-weight: 600;
+    padding: 20px;
+    width: 250px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin: 25px;
+}
+
+#about-me a button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+}
+
+#about-me a button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#about-me a button:hover span {
+    padding-right: 25px;
+}
+
+#about-me a button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/***** SECTION II: JOURNEY *****/
+
+#my-journey {
+    background-color: rgb(32, 47, 56); 
+    height: 80vh;
+    scroll-snap-align: start;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#my-journey h3 {
+    color: #FFF;
+}
+
+#my-journey p {
+    color: #FFF;
+    line-height: 40px;
+    font-size: 14pt;
+    margin: 5px 200px;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.skills-list li {
+    list-style-type: none;
+    margin-top: 35px;
+    letter-spacing: 15px;
+}
+
+.skills-list i {
+    color: #EDAE14;
+    font-size: 45px;
+}
+
+/***** SECTION III: FOOTER *****/
+
+footer {
+    background-color: #EDAE14;
+    height: 20vh;
+    width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+footer a img {
+    height: 20px;
+    width: 20px;
+    padding: 0 5px;
+}
+
+footer h4 {
+    color: #000;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+footer a img {
+    height: 35px;
+    width: 35px;
 }
