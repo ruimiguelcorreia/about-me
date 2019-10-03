@@ -336,53 +336,90 @@ footer a img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: space-around;
 }
 
 .field {
-    height: 80px;
-    margin-bottom: 20px;
+    height: 60%;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.left-row {
+    display: flex;
+    width: 50%;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
-label {
-    display: inline-block;
+.left-row label {
     text-align: left;
-    margin-left: 25%;
-    margin-bottom: 10px;
     font-size: 14pt;
+    width: 70%;
+    margin-right: 10%;
+    margin-left: 20%;
+    margin-bottom: 5%;
 }
 
-input {
-    margin-left: 25%;
-    margin-right: 5%;
-    width: 300px;
-    height: 50%;
-    padding: 10px;
+.left-row input {
     border: none;
-    border-bottom: solid #EDAE14 2px;
-    font-size: 12pt;
+    border-bottom: #EDAE14 2px solid;
+    font-size: 14pt;
+    width: 70%;
+    margin-right: 10%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    outline: none;
 }
 
-textarea {
-    margin-left: 25%;
-    margin-right: 5%;
-    padding: 10px;
-    width: 300px;
-    height: 50%;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-size: 12pt;
+.right-row {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.right-row label {
+    text-align: center;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 20%;
+    font-size: 14pt;
+    margin-bottom: 5%;
+}
+
+.right-row textarea {
     resize: none;
-}
-
-.textarea {
-    height: 100px;
+    width: 70%;
+    height: 80%;
+    border: none;
+    border-top: #EDAE14 solid 2px;
+    border-bottom: #EDAE14 solid 2px;
+    padding-top: 25px;
+    margin-left: 10%;
+    margin-right: 20%;
+    font-size: 14pt;
+    outline: none;
 }
 
 .form-buttons button {
     border-radius: 50%;
-    height: 75px;
-    width: 75px;
+    height: 85px;
+    width: 85px;
+    background-color: #FFF;
+    font-weight: 600;
+    margin-top: 3%;
+    font-size: 11pt;
+    border: rgb(230, 230, 230) 1px solid;
+}
+
+.form-buttons button:first-child {
+    background-color: #EDAE14;
+    color: #FFF;
+    border: none;
+}
+
+.form-buttons button:hover {
+    cursor: pointer;
 }
