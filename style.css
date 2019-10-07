@@ -423,3 +423,133 @@ footer a img {
 .form-buttons button:hover {
     cursor: pointer;
 }
+
+/***** HOME PAGE *****/
+
+#greetings {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(32, 47, 56, 0.96), rgba(32, 47, 56, 1.0)), url("header_background.jpg");
+    background-attachment: fixed;
+}
+
+#greetings nav {
+    border: solid 4px rgb(26, 38, 46);
+    background-color: rgb(59, 88, 105);
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 350px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+#greetings a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 75px;
+    color: #FFF;
+    transition: transform 1.0s;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#greetings a:link {
+    text-decoration: none;
+}
+
+#greetings h1 {
+    text-transform: uppercase;
+}
+
+#greetings h2 {
+    margin-top: 10px;
+}
+
+.home-nav-leg{
+    font-size: 11pt;
+    text-align: center;
+    color: #EDAE14;
+    text-transform: uppercase;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-decoration: none;
+}
+
+#greetings a:hover {
+    transform: scale(1.02);
+}
+
+#greetings a:hover span {
+    display: inline-block;
+    opacity: 1.0;
+}
+
+/***** PORTFOLIO SECTION *****/
+
+#portfolio {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio h3 {
+    margin-bottom: 5%;
+}
+
+.examples {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    width: 40%;
+    border: 1px solid rgb(179, 132, 14);
+    box-shadow: 8px 8px #888888;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s;
+}
+
+.card-header {
+    color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(179, 132, 14);
+    background-color: #EDAE14;
+    padding: 5px 10px;
+}
+
+.card-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
