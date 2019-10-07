@@ -12,7 +12,7 @@
             <div class="contact-form-box">
                 <h1>Shall we work together?</h1>
                 <div class="form">
-                    <form>
+                    <form id="form">
                         <div class="field">
                             <div class="left-row">
                                 <label for ="name">Your Name:</label>
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <div class="form-buttons">
-                            <button type="submit">Let's Talk!</button>
+                            <button id="submit" type="button">Let's Talk!</button>
                             <button type="reset">Clear</button>
                         </div>
                     </form>
@@ -42,5 +42,32 @@
             <a href="https://www.linkedin.com/in/ruimcorreia" target="_blank"><img src="linkedin_logo.png" alt="Link for Linkedin Acc."></a>
             <h4>Copyright &copy 2019 Made by Rui Miguel Correia</h4>
         </footer>
+
+        <script>
+            /*Clear Button
+            var frm_elements = oForm.elements;
+            for {i=0; i<frm_elements.length; i++} {
+                field_type = frm_elements[i].type.toLowerCase();
+                switch(field_type)
+                {
+                    case "text":
+                    case "email":
+                    case "textarea":
+                        frm_elements[i].value = "";
+                        break;
+                    default:
+                    break;
+                }
+            }*/
+
+            //Submit Button - alert() inside the function
+            var submitButton = document.getElementById("submit");
+            submitButton.addEventListener('click', respondClick);
+
+            function respondClick() {
+                var form = document.getElementById("form");
+                alert(form.user_name.value + "\n" + form.user_company.value + "\n" + form.email.value + "\n" + form.user_message.value);
+            }
+        </script>
     </body>
 </html>
